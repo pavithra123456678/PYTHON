@@ -1,0 +1,17 @@
+class Solution:
+    def largestElement(self, nums):
+        largest = nums[0]
+        n = len(nums)
+        for i in range(n):
+            if nums[i] > largest:
+                largest = nums[i]
+        return largest
+
+    def secondLargestElement(self, nums):
+        largest = self.largestElement(nums)  
+        n = len(nums)
+        secondLargest = -1
+        for i in range(n):
+            if nums[i] > secondLargest and nums[i] != largest:
+                secondLargest = nums[i]
+        return secondLargest
