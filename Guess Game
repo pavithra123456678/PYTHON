@@ -1,14 +1,57 @@
 import random
-import time 
-name1=input
-name1=input("Enter Player1 name:")
-name2=input("Enter Player2 name:")
-nums=[]
-while(len(nums)<5):
-    d=random.randint(1,10)
-    if(d in nums):
+import time
+
+Name1 = input("Enter Name1: ")
+Name2 = input("Enter Name2: ")
+
+nums = []
+
+while len(nums) < 5:
+    d = random.randint(1,10)
+    if d in nums:
         continue
     else:
         nums.append(d)
-print(nums)
 
+print("------------------")
+print("Computer has five integers 1 to 10 in mind")
+print("You havve 3 turns to guess it.. Ready for game???")
+player1 = []
+player2 =[]
+
+s1 =0
+s2 =0
+
+for i in range(3):
+    print("--------TURN {}".format(i+1))
+    a = int(input("Turn {} Predict: ".format(i+1)))
+
+    player1.append(a)
+    if a in nums:
+        print("------Correct")
+        s1 = s1+1
+    else:
+        print("------Wrong")
+    b = int(input("Hi {} ---Turn {} Predict: ".format(Name2,(i+1))))
+    player2.append(b)
+    if b in nums:
+        print("-----Correct")
+        s2 =s2+1
+    else:
+        print("-----Wrong")
+print("----------------")
+print("Lets see the summery")
+print("Computer has fixed ",nums)
+print("Player1 has choosen: ",player1)
+print("His score is: ",s1)
+print("Player2 has choosen: ",player2)
+print("His score is: ",s2)
+
+time.sleep(2)
+
+if s1 > s2:
+    print("        {} Winner ".format(Name1))
+elif s2 > s1:
+    print("      {} Winner ".format(Name2))
+else:
+    print("--------Draw")
