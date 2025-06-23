@@ -1,0 +1,7 @@
+a=[20,123,56,21,55,66,88,120,34,67,90]
+for i in a:
+    d=[int (j) for j in str(i)]
+    if(sum(d)%2==0):
+        print(i,":",True)
+    else:
+        print(i,":",False)
