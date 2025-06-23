@@ -1,0 +1,14 @@
+import random
+import time 
+name1=input
+name1=input("Enter Player1 name:")
+name2=input("Enter Player2 name:")
+nums=[]
+while(len(nums)<5):
+    d=random.randint(1,10)
+    if(d in nums):
+        continue
+    else:
+        nums.append(d)
+print(nums)
+
