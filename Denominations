@@ -1,0 +1,17 @@
+amt = int(input("Enter an amount in Rupees: "))
+
+notes = [500,200,100,50,20,10,5,2,1]
+
+dict={}
+
+for i in notes:
+    if amt>=i:
+        count=amt//i
+        dict[i]=count
+        amt-=count*i 
+print(dict)
+
+         
+
+ 
+
