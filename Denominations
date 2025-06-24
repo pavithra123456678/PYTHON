@@ -1,5 +1,8 @@
 amt = int(input("Enter an amount in Rupees: "))
 
+#123
+#100+20+3
+
 notes = [500,200,100,50,20,10,5,2,1]
 
 dict={}
