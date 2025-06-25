@@ -4,7 +4,7 @@ def fact(n):
     else:
         return n*fact(n-1)
     
-n=int(input("Enter any num"))
+n=int(input("Enter any number:"))
 b=fact(n)
 print(b)
           
