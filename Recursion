@@ -1,0 +1,7 @@
+def pavi(a):
+    if(a==1):
+          return
+    pavi(a-1)
+    print("hai")
+    pavi(a-1)
+pavi(5)
