@@ -1,0 +1,12 @@
+def hai(n):
+    return n-3
+    
+def abc(n):
+    return n-1
+
+def pavi(n):
+    print("hai")
+    return n==2
+
+a=pavi(abc(hai(7)))
+print(a)
