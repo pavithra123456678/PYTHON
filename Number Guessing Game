@@ -1,0 +1,25 @@
+import random 
+def game():
+    target_number = random.randint(1,1000)
+    guess = 0 
+    number_of_tries = 0 
+    max_tries = 10 
+    print("Welcome to the Game!")
+    print("I have select a number between 1 - 1000. You have 10 tries to guess it")
+    while number_of_tries < max_tries: 
+        try:
+            guess = int(input(f"Attempt {number_of_tries+1} \nEnter your guess:  "))
+            number_of_tries += 1 
+            if guess< target_number:
+                print("Too low! Try again.")
+            elif guess > target_number:
+                print("Too high! Try again.")
+            else:
+                print(f"Congratulations! You guessed the correct number in {number_of_tries} tries")
+                break
+        except ValueError:
+            print("Please enter a number")
+                
+    if guess != target_number:
+        print(f"Sorry! You've used all {max_tries} tries. The number is {target_number}")
+game()
