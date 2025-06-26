@@ -1,0 +1,22 @@
+def find_day(year):
+    b = year % 400
+    c = b // 100
+    d = b % 100
+    e = d // 4
+    f = d - e
+    g = ((c * 5) + (e * 2) + f) % 7
+    
+    days = {
+        0: "Sunday",
+        1: "Monday",
+        2: "Tuesday",
+        3: "Wednesday",
+        4: "Thursday",
+        5: "Friday",
+        6: "Saturday"
+    }
+       
+    return days[g]
+
+year = int(input("Enter the year: "))
+print("Day is:", find_day(year))
