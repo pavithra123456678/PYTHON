@@ -10,6 +10,6 @@ class Person:
         print("Company:", Person.com)
         
 s1= Person("PAVI", 40)
-s = Person("RADHIKA", 30)
+s = Person("Pavithra", 30)
 s.display()
 s1.display()
